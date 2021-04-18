@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			li{
+				list-style: none url(img/black.jpg) outside; 
+			}
+			#box{
+				width: 800px;
+				height: 1000px;
+				background-image: url(../1.html基础的标签使用/img/WechatIMG3.jpg);
+				background-repeat: no-repeat;
+				background-position: center
+			}
+			#box2{
+				width: 300px;
+				height: 300px;
+				background-color: deeppink;
+				/*display: none;*/
+				border-radius: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		list-style  /*简写属性,用于把所有用于列表掉属性设置于一个声明中*/
+		list-style-image        url(img/black.jpg)  自定义样式
+		list-style-position     inside：列表项目标记放置在文本以内，且环绕文本根据标记对齐   outside：默认值，保持标记位于文本点左侧
+		list-style-type 		    none   去掉点   
+		
+		<br />
+		<br />
+		background  简写属性，作用是将背景属性设置在一个声明中
+		background-attachment  背景图像是否固定或者随着页面点其余部分滚动
+		background-color  设置元素点背景颜色
+		background-image  把图像设置为背景,延伸平铺
+		background-position  设置背景图像的起始位置 设置图片的位置
+		background-repeat    设置背景图像是否及如何重复 no-repeat 不平铺 repeat 平铺 repeat-x  横向平铺  repeat-y  纵向平铺
+		<br />
+		
+		display: none隐藏元素，该方式隐藏在页面中不占位
+		visibility：hidden；隐藏元素，该方式隐藏的元素在页面中占位
+		border-radius：100px  取元素宽度的半径
+		
+		<ul>
+			<li style="list-style: disc;">C</li>
+			<li>c++</li>
+			<li>Python</li>
+			<li>C#</li>
+			<li>JS</li>
+			<li>OC</li>
+			<li>swift</li>
+			<li>shell</li>
+			<li>JAVA</li>
+			<li>PHP</li>
+			<li>汇编</li>
+		</ul>
+		<div id="box">
+			
+		</div>
+		<div id="box2">
+			<br />
+			sunwenbo is a good man
+		</div>
+	</body>
+</html>

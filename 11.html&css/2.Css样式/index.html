@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 内部样式  语法 
+			<styletype="text/css"> /*css语句*/
+			</style>
+		注：使用style标记创建样式时，最好将该标记写在<head></head>
+		-->
+		<!--内部样式-->
+		<style type="text/css">
+			p{
+				color: red;
+			}
+		</style>
+		<!--外部样式 -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<meta charset="utf-8" />
+		<title>css</title>
+	</head>
+	<body>
+		<!--行内样式  优秀级最高，引用越靠后优先级越高-->
+		<p>sunwenbo is a good man </p>
+ 		<p style="color: blue;">sunwenbo is a cool man </p>
+ 		<!--
+ 		块级元素：元素显示为矩形区域的形式显示，独占一行，可以定义自己的宽度和高度，块元素一般都作为其他元素的容器，它可以容纳其他内联模块
+ 			div、dl、dt、dd、ol、ul、li、fieklset、f1-f6、p、form、hr、col、table、tr、td、
+ 			
+ 		内联元素：表现形式始终在一行内，内联模式不能设置宽高
+ 			a、span、iem、stong、b	
+ 		内联块级元素：块级和内联元素的集合，元素是可以设置宽高的，不会独占一行，实际上属于内联元素，使用场景导航菜单
+ 			img、input、select、iframe
+ 			
+ 		元素类型转换：
+ 			display属性：
+ 				block: 转换为块级元素
+ 				inline: 转换为行内元素
+ 		-->
+ 		<span style="background: green; width: 500px; display: inline;"> sunwenbo is a good man</span>
+	</body>
+</html>

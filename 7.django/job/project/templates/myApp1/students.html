@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+</head>
+<body>
+    <h1>学生信息列表</h1>
+    <ul>
+        <!--[python04,python05,python06]-->
+        {%for student in students%}
+        <li>
+            <a href="student.id">{{student.id}}--{{student.sname}}--{{student.sage}}--{{student.scontend}}--{{student.sgrade}}--{{student.lastTime}}--{{student.createTime}}</a>
+        </li>
+        {%endfor%}
+    </ul>
+</body>
+</html>

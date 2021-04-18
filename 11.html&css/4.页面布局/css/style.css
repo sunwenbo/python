@@ -1,0 +1,41 @@
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#box{
+				width: 800px;
+				background-color: pink;
+				margin: auto;
+			}
+			#logol{
+				height: 100px;
+				background-color: red;
+			}
+			#logo2{
+				height: 100px;
+				background-color: darkgreen;
+			}
+			#nav{
+				height: 26px;
+				background-color: yellow;
+			}
+			#main{
+				height: 600px;
+			}
+			#leftMain{
+				display: inline-block;
+				width: 400px;
+				float: right;
+				height: 600px;
+				background-color: deeppink;
+			}
+			#rightMain{
+				display: inline-block;
+				width: 400px;
+				height: 600px;
+				background-color: blueviolet;
+			}
+			#footer{
+				height: 43px;
+				background-color: palevioletred;
+			}

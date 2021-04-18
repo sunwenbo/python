@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生分页显示</title>
+</head>
+<body>
+    <ul>
+        {% for student in students %}
+            <li>
+                {{forloop.counter}}--{{student.id}}--{{student.sname}}--{{student.sage}}--{{student.scontend}}--{{student.sgrade}}--{{student.lastTime}}--{{student.createTime}}
+            </li>
+        {% endfor %}
+    </ul>
+    <ur>
+        {% for index in students.paginator.page_range %}
+            {% if index == students.number %}
+                <li>
+                    {{ index }}
+                </li>
+            {% else %}
+                <li>
+                    <a href="/studentpage/{{index}}/">{{index}}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ur>
+</body>
+</html>

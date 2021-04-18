@@ -1,0 +1,31 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #0000FF;
+	font-size: 20;
+}
+#menu>li,#menu>li>a,#menu>li>ul {
+	float:left
+}
+#menu>li>a{
+	display: block;
+	width: 30px;
+	height: 150px;
+	padding: 12px 10px 0 10px;
+	background-color: greenyellow;
+}
+#menu>li:hover ul{
+	display: block;
+}
+#menu ul{
+	display: none;
+	width: 100px;
+	background-color: aquamarine;
+	padding-top: 20px;
+}

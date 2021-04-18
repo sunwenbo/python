@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>盒模型</title>
+		<style type="text/css">
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				padding-left: 10px;
+			}
+			#box2{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				margin-top: 10px;
+			}
+			#box3{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				border: solid red 5px;
+			}
+			#box4{
+				width: 100px;
+				height: 100px;
+				padding: 10px;
+				margin: 20px;
+				border: solid yellow 5px;
+				background-color: greenyellow;
+			}
+			#box5{
+				width: 100px;
+				height: 100px;
+				overflow: scroll;  /* visible 会呈现元素框之外 scroll 滚动条  auto   hidden超出内容隐藏不显示*/
+				background-color: peachpuff;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			盒模型是CSS布局的基石，它规定了网页元素如何显示以及元素间互相关系。<br />
+			css定义所有的元素都可以拥有像盒子一样的外形盒平面空间，即包含边框，外边距，内边距、内容区
+		</p>
+		<p>
+			标准盒子模式：
+		</p>
+		<div id="box1">
+			sunwenbo
+		</div>
+		<div id="box2">
+			boge
+		</div>
+		<div id="box3">
+			aaaaaa
+		</div>
+		<div id="box4">
+			bbbbbbbbbbb
+		</div>
+		<div id="box5">
+			sunwenbo sunwenbo sunwenbosunwenbosunwenbosunwenbosunwenbosunwenbosunwenbosunwenbosunwenbo
+		</div>
+		<p>padding :填充，元素边框与元素内容之间的区域，称之为内边框，</p><br />
+		<p>用来调整内容在容器中的位置关系，用来调整子元素在父元素中的位置关系，padding属性需要添加在父元素上</p>
+	</body>
+</html>

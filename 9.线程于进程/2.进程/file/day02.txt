@@ -1,0 +1,74 @@
+day02 python
+
+函数
+print(int(1.8))     	只打印整数部位
+print(float(1.6))   	打印浮点型数字
+print(int("123"))	将字符串转为整数类型
+print(float("1.63"))	将字符串转为浮点类型
+print(int("+123"))      只有作为正负号才有意义
+print(float("-123.12"))
+a2 = abs(a1)            返回给定参数的绝对值
+print(max(1,2,3,4,5,6,7,8,9))    计算出最大值
+print(min(1,2,3,4,5,6,7,8,9)) 	 计算出最小值
+print(pow(2,4))			 返回x，y次方
+print(round(3.456))		 四舍五入
+print(round(3.456, 2))           四舍五入保留两位
+
+import math    导入库   库封装一些功能
+math    数学相关的库
+print(math.ceil(18.9))        向上取整
+print(math.floor(18.1))       向下取整
+	        返回整数部分与小数部分都是浮点型
+print(math.sqrt(18))          返回开方值
+
+import random  导入随机数
+print(random.choice([1,3,5,7,9,"你好"]))    打印随意一个数字
+print(random.choice(range(1000)))           生成1000以内随机数
+print(random.choice("sunwenbo"))            打印一个随机字母
+
+r1 = random.choice(range(10))+1
+print(r1)				    打印0-10的随机数
+
+#random.randrange([start,] stop[, step])
+#start--指定范围的开始值，包含在范围内，默认是0
+#stop--指定范围的结束值，不包含在范围内
+#step--指定的递增基数，默认是1
+#从0-99选取一个随机数
+print(random.randrange(100))   
+
+print(random.random())			随机生成[0,1]之间的数（浮点数）
+
+print(random.random())
+list = [1,2,3,4,5,6]
+random.shuffle(list)			将列表的数字随机输出
+print(list)
+
+print(random.uniform(3,100))		输出3到100之间的随机浮点数和整数
+
+
+
+
+表达式：由变量、常量和运算符组成的式子
+算术运算符：+   -   *   /   %   **（求幂）  //（取整）
+
+阅读表达式：
+1.功能：进行相关符号的数学运算，不会改变变量的值
+2.值：相关的数学运算结果
+
+赋值运算符和赋值运算表达式  （ 赋值运算符 ） = 
+赋值运算表达式
+格式：变量 = 表达式
+功能：计算等号右侧“表达式”的值，并赋值给等号左侧的变量
+
+
+
+
+
+
+
+
+
+
+
+
+   

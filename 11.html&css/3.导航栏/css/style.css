@@ -1,0 +1,13 @@
+	li{
+		display: inline-block;
+		width: 100px;
+		height: 30px;
+		background-color: #ff8888;
+		font-size: 12px;/*设置字体大小*/
+		text-align: center;/*设置字体对齐方式*/
+		line-height: 30px;/*等于li的高度，可以让字体垂直居中*/
+	}
+		a{
+			color: #fff; /*#112233   #123*/
+			text-decoration: none;/*去除底线*/
+		}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>第一个页面</title>
+	</head>
+	<body>
+		sunwenbo is a good
+		
+		<!--锚链接-->
+		<a href="#mao1">跳转锚点</a>
+		
+		<!--注释-->
+		<!--标题标签  共有6个标签 字体越来越小 -->
+		<h1>sunwenbo</h1>
+		<h2>sunwenbo</h2>
+		<h3>sunwenbo</h3>
+		<h4>sunwenbo</h4>
+		<h5>sunwenbo</h6>
+		<h6>sunwenbo</h6>
+			
+		<!--换行标签  换行-->
+		sunwenbo is a good <br />	sunwenbo is a good	sunwenbo is a good	sunwenbo is a good
+
+		<!--段落标签-->
+		<p>中国疾病预防控制中心流行病学首席专家吴尊友6月15日在接受总台央视《新闻1+1》专访时表示，未来三天北京报告的病例数决定了这次疫情的走向。三天已过，如何给出判断？防控举措，会否有所调整？病毒溯源，有何最新进展？局部暴发，会否再次出现？</p>
+		<p>中国疾病预防控制中心流行病学首席专家 吴尊友：目前北京已经划分出高风险、低风险地区。低风险地区人员到北京以外的地方出差，应该不会受到限制。</p>
+		
+		<!--锚点-->
+		<a name="mao1"></a>
+		
+		<!--水平线标签-->
+		<hr/>
+		<h4>sunwenbo is a good man </h4>
+		<!--字体样式标签-->
+		<!--加粗-->
+		<strong>sunwenbo is a good man </strong><br />
+		<b>sunwenbo is a good man</b><br/>
+		<!--倾斜-->
+		<em>sunwenbo is a good man</em><br/>
+		<i>sunwenbo is a good man</i><br/>
+		<!--特殊符号 &nbsp; 空格  &gt 大于 &lt 小于 &quot 双引号 &copy 版权符号 -->
+		<p> sunwenbo&nbsp;&nbsp;is a &nbsp; good man </p>
+		&gt; &lt; &quot; &copy;
+		
+		<!--图像标签 常用JPG GIF PNG alt当加载图片有问题时提示，title 鼠标停放显示-->
+		<img src="img/WechatIMG3.jpg" alt="本人照片" title="本人照片123" height="300" width="300"/><br />
+		
+		<!--链接标签  默认在本窗口打开  新窗口打开 target="_blank -->
+		<a href="https://www.baidu.com/" target="_blank">百度一下</a><br />
+		<a href="img/WechatIMG3.jpg" target="_blank">帅哥</a>
+		<!--页面同链接，标签嵌套-->
+		<a href="https://www.baidu.com/" target="_blank"> <img src="img/WechatIMG3.jpg" title="本人照片123" height="300"></img></a> <br />
+		
+			
+		<!--无序列表 type 样式不一样-->
+		<ul type="square">
+			<li>sunwenbo is a good man </li>
+			<li>sunwenbo is a nice man </li>
+			<li>sunwenbo is a c man </li>
+		</ul>
+		<!--有序列表 type 样式不一样 -->
+		<ol type="A">
+			<li>sunwenbo is a good man </li>
+			<li>sunwenbo is a nice man </li>
+			<li>sunwenbo is a c man </li>
+		</ol>
+		<!--定义列表 -->
+		<dl>
+			<dt>学院</dt>
+			<dd>电子信息工程</dd>
+			<dt>学院2</dt>
+			<dd>电子信息工程2</dd>
+		</dl>
+		<!--表格的使用
+			单元格，行，列
+			
+			align: 表格的位置属性  right center lift  
+			border: 边框 1 代表框的厚度
+			cellspacing:  行间距 
+			cellpadding:  字间距
+			
+			跨列 colspan="n" 列数 
+			跨行 rowspan="n" 行数
+		-->
+		<table border="1" cellspacing="0" cellpadding="5" align="center">
+			<tr>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>年龄</th>
+			</tr>
+			<tr>
+				<td colspan="2" bgcolor="aqua">第一行第一列</td>
+				<td>第一行第二列</td>
+				<!--<td>第一行第三列</td>-->
+			</tr>
+			<tr>
+				<td>第二行第一列</td>
+				<td>第二行第二列</td>
+				<td rowspan="2">第二行第三列</td>
+			</tr>		
+			<tr>
+				<td>第三行第一列</td>
+				<td>第三行第二列</td>
+				<!--<td>第三行第三列</td>-->
+			</tr>		
+		</table>	
+	</body>
+</html>

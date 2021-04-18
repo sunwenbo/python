@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>选择器</title>
+		<style type="text/css">
+			.p1{
+				background-color: red;
+				
+			}
+			.p2{
+				width: auto;
+				height: auto;
+				background-color: greenyellow;	
+			}
+			h1.a{
+				background-color: yellow;	
+			}
+			h1,div,p{
+				background-color: burlywood;
+			}
+			#box2 p{
+				background-color: red;
+				border: solid black 5px; /*变宽solid线条  black颜色 5px 线条粗细;*/
+			}
+			#box2>p{
+				background-color: blanchedalmond;
+			}
+			a:link{
+				color: blue;
+			}
+			a:visited{
+				color: red;
+			}
+			a:hover{
+				color: palegreen;
+			}
+			a:active{
+				color: hotpink;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+		1.元素选择器/标签选择器（element选择器） 
+		所有页面元素都可以作为选择器（标签选择器）
+			1.如果想改变某个元素都默认样式时，可以使用元素选择器
+			2.统一文档某个元素显示效果时，可以使用类型选择器
+			元素名称{属性:属性值;}	
+		2.id选择器
+			每一个元素都可以有一个id值，一个页面中的id值是唯一的
+			创建网页的外围结构
+			#id{属性:属性值;}
+		3.class选择器
+			1.使用类选择器时，应该先为每一个元素定义一个类名称，class选择器更适合定义一类样式
+			类名的第一个字符不能用数字
+			.p1{width:200px;background-color: red;}
+			
+		4.*通配符（全局选择器）
+			*{}
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		5.交集选择器
+			用于选择同时有多个选择器
+			选择器1 选择器2{属性：属性值;}
+			h1.centos{color:red}
+		6.并集选择器（群组选择器）
+			h1,div,p{
+				background-color: burlywood;
+			}
+			
+		7.后代选择器（包含选择器）
+			选择器1和选择器2用空格隔开，含义就是选择器1中包含的所有选择器2
+			#box2 p{
+				background-color: red;
+			}
+		8.子选择器
+			选择器1和选择器2用>连接，含义就是选择器1中所有子一级选择器2
+			
+		9.伪类选择器
+			a:link{属性：属性值；}超链接的初始状态
+			a:visited{属性：属性值；}超链接被访问后的状态
+			a:hover{属性：属性值；}鼠标悬停，即鼠标划过连接时的状态
+			a:active{属性：属性值；}超链接被激活时的状态，即时表按下时超链接的状态
+			1.当这4个超链接伪类选择器联合使用时，应注意他们的顺序，正常顺序为：a:lnk,a:visited,a:hover,a:active错误的顺序有时会使超链接的样式失效；
+			2.为了简化代码，可以把伪类选择符中相同的声明提出来放在a选择符中：
+			例如：a{color:red} a:hover{color:green;}表示超链接的三种状态相同，只有鼠标划过变颜色
+			a:link{
+				color: blue;
+			}
+			a:visited{
+				color: red;
+			}
+			a:hover{
+				color: palegreen;
+			}
+			a:active{
+				color: hotpink;
+			}
+			选择器的权重：
+				1.标签选择器  2.class选择器  3.id选择器  4.属性选择器 ……
+		</p>
+		<p class="p1,pp1">sunwenbo is a good man</p>
+		<p class="p1">sunwenbo is a nice man</p>
+		<p class="p1,pp3">sunwenbo is a handsome man</p>
+		<p class="p2">sunwenbo is a good man</p>
+		<h1 class="a">1111</h1>
+		<h1 class="b" class="a">2222</h1>
+		<h1>3333</h1>
+		<h1>4444</h1>
+		<div id="">
+			adfasdf
+		</div>
+		<div id="box1">
+			<p>asdfasdfas</p>
+		</div>
+		<div id="box2">
+			<p>asdfasdf</p>
+			<div>
+				<p>lkjlj;ljl;</p>
+			</div>
+		</div>
+		<a href="https://www.baidu.com">百度一下</a>
+		
+	</body>
+</html>

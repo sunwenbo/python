@@ -1,0 +1,13 @@
+
+创建工程：django-admin startproject project
+创建项目：python manage.py start app myApp1
+激活项目：修改settings.py 中的INSTALLED_APPS
+配置数据库： 1，修改__init__.py 文件 pymysql.install_as_MySQLdb()  2，修改settings.py中的DATABASES
+创建模型类：在项目目录下的models.py文件中
+生成迁移文件：python manage.py makemigrations
+执行迁移文件：python manage.py migrate
+创建站点：project admin.py
+创建模板/项目目录：templates/myApp1
+在settings.py 文件中配置模板路径   [os.path.join(BASE_DIR,'templates')],
+在project下：修改urls.py
+

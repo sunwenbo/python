@@ -1,0 +1,44 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="/static/myApp1/css/style.css">
+    <script type="text/javascript" src="/static/myApp1/js/test.js"></script>
+    <img src="/static/myApp1/image/123.png">
+</head>
+<body>
+    <a href="good/123">链接</a>
+    <a href="{% url 'app:good' 1 2 %}">链接</a>
+    <h1>sunwenbo is a nice man </h1>
+    <h1>{{stu.sname}}</h1>
+    <h1>{{stu.getName}}</h1>
+    <h1>{{num}}</h1>
+    {% if num %}
+        <h1>sunwenbo is a nice man </h1>
+    {% endif %}
+
+    {% comment %}
+        <h1>sunwenbo is a nice man </h1>
+        <h1>{{stu.sname}}</h1>
+    {% endcomment %}
+    <h1>{{str|upper}}</h1>
+    <h1>{{list|join:"#"}}</h1>
+    <h1>{{test|default:"没有该变量"}}</h1>
+    <h1>{{time1|date:'Y-m-d'}}</h1>
+    <h1>{{num|add:10}}</h1>
+    <h1>{{num|add:-10}}</h1>
+    <!--num/1*5-->
+    <h1>{% widthratio num 1 5 %}</h1>
+    <!--num/5*1-->
+    <h1>{% widthratio num 5 1 %}</h1>
+    {# <h1>sunwenbo is a nice man </h1> #}
+    {{code|escape}}
+    {{code|safe}}
+    {% autoescape off %}
+    {{code}}
+    {% endautoescape %}
+    <img src="{% static 'myApp1/image/123.png' %}">
+</body>
+</html>

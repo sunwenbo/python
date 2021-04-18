@@ -1,0 +1,3 @@
+[console_scripts]
+ldap = ldap:main
+

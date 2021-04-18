@@ -1,0 +1,155 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="http://cityservice.cityunion.org.cn:80/jkconsole/">
+<meta http-equiv="Pragma" ,content="no-cache">
+<meta charset="UTF-8">
+<title>欢迎登录全国城市一卡通互联互通清分清算平台中心系统</title>
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/metro_blue/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="easyui/demo/demo.css">
+<script type="text/javascript" src="easyui/jquery.min.js"></script>
+<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="selfjs/common/jQueryAjax.js"></script>
+<script type="text/javascript" src="easyui/jQuery.Json.js"></script>
+<script type="text/javascript" src="selfjs/common/base64.js"></script>
+<script type="text/javascript" src="selfjs/common/md5.js"></script>
+<script type="text/javascript" src="selfjs/common/RSA.js"></script>
+<script type="text/javascript" src="selfjs/common/BigInt.js"></script>
+<script type="text/javascript" src="selfjs/common/Barrett.js"></script>
+<STYLE TYPE="text/css">h1{font-size: 24px;} BODY {background-image: URL(images/bg3.png);background-position: center;background-repeat: no-repeat;background-attachment: fixed;background-size: 100% auto;}</STYLE>	
+</head>
+
+<body>
+<form id="logonform">
+	<table width="100%"  height="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td height="146"></td></tr>
+      <tr>      
+         <td height="415" ><table width="518" border="0" align="center" cellpadding="0" cellspacing="0">
+           <tr>
+            <td width="518" height="215" style="background:url(images/login11.png)">
+            <table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
+             <tr><td height="115" ></td></tr>
+             <tr>
+                    <td width="40" height="50"></td>
+                    <td width="38" height="50"><b><font size='14' color='white'>用&nbsp;&nbsp;户</font></b></td>
+                    <td width="242" height="50"><input type="text" name="usercode" id="usercode" style="width:164px; height:32px; line-height:34px; background:url(images/inputbg.gif) repeat-x; border:solid 1px #d1d1d1; font-size:9pt; font-family:Verdana, Geneva, sans-serif;"></td>
+            </tr>
+             <tr>
+                    <td height="50"></td>
+                    <td height="50"><b><font size='14' color='white'>密&nbsp;&nbsp;码</font></b></td>
+                    <td height="50"><input type="password" name="password" id="password" style="width:164px; height:32px; line-height:34px; background:url(images/inputbg.gif) repeat-x; border:solid 1px #d1d1d1; font-size:9pt; "></td>
+                  </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="120"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                 <!--  <td width="208" height="190" style="background:url(images/login02.jpg)">&nbsp;</td> -->
+                <td width="518" style="background:url(images/login08.png)"><table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
+               
+                   <tr>
+                    <td  height="40">&nbsp;</td>
+                   </tr>
+                  <tr>
+                    <td width="40" height="60">&nbsp;</td>
+                    <td width="70" height="60">&nbsp;</td>
+                    <td height="60"><img src="images/logon.gif" width="101" height="37" onclick="checkUser()" ></td>
+                  </tr>
+                  <tr>
+                    <td  height="20">&nbsp;</td>
+                   </tr>
+                </table></td>
+               <!--  <td width="214" style="background:url(images/login04.jpg)" >&nbsp;</td>     -->   
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+              <td width="518" height="80" style="background:url(images/login10.png)">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0"></table>
+            </td>
+            <!-- <td height="133">&nbsp;</td> -->
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+	<script type="text/javascript">
+		var index = 0;
+		var height1 = document.body.clientHeight;
+		var width1 = document.body.clientWidth;
+		var basePath = 'http://cityservice.cityunion.org.cn:80/jkconsole/';
+		if(top != self){
+			if(top.location != self.location){
+			   top.location=self.location; 
+			}
+		}
+		//rsa公钥
+		var key=null;  
+		function bodyRSA(){
+			setMaxDigits(130);
+		    key = new RSAKeyPair("10001", "", "a2fd003cf10b854cc678f6cce804733d15d203af4f1f7cf3b3092ae8c1726dfc2fec86b187d119a6012a862a96b797d5ba34aa5ad81e12ea78b0542c8081bf10b3fa14c9640e11099b16a6d447b96c2035c546bf745d7ba8818c6065ebfcc71db92249aa8cf5370ed122b13a987ddf720b0eabfe7949793724045f0f94ce5477"); 
+		}
+		
+		function checkUser(){
+		    var submitData = geneSubmitDataFromForm("#logonform",{});
+		    submitData['usercode']=$.trim(submitData['usercode']);
+		    submitData['password']=$.trim(submitData['password']);
+		    if(submitData['usercode']==''){
+		        $.messager.alert('提示','请填写用户名','',function(){});
+				return;
+		    }
+		    if(submitData['password']==''){
+		        $.messager.alert('提示','请填写密码','',function(){});
+				return;
+		    }
+		    bodyRSA();  
+			var password =  encryptedString(key, $("#password").val());
+		    //submitData['password']=base64encode($("#password").val());
+		     //submitData['password']=md5_vm_test($("#password").val());
+		     submitData['password']=password; 
+			jQueryAjaxForJSON(basePath + '/logon.do', submitData,
+					function(sRet) {
+						document.forms[1].submit();
+					}, function(sRet) {
+						if("Index: 0, Size: 0"==sRet.message){
+							$.messager.alert('提示','请输入正确的用户名！','',function(){
+								$("#usercode").focus();
+							});
+							
+						}else{
+							$.messager.alert('提示',sRet.message,'',function(){
+								$("#password").focus();
+							});
+							
+						}
+					}, function() {
+						$.messager.alert('提示','响应异常！','',function(){});
+					});
+		} 
+		
+		document.onkeydown=function enterToTab() 
+		{ 
+			if(event.keyCode == 13&&event.srcElement.type =='text') {
+				$("#password").focus();
+		 } 
+			 if(event.keyCode == 13&&event.srcElement.type =='password') {
+					checkUser(); 
+			 }  
+		}
+	</script>
+	<form action="http://cityservice.cityunion.org.cn:80/jkconsole/redirect.do">
+	</form>
+
+</body>
+</html>

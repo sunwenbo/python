@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: ldap
+Version: 1.0.2
+Summary: LDAP utils.
+Home-page: https://github.com/andreif/ldap
+Author: Andrei Fokau
+Author-email: andrei@5monkeys.se
+License: BSD
+Download-URL: https://github.com/andreif/ldap/tarball/1.0.2
+Keywords: ldap,utils,mock,server
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: ldap3
+
+UNKNOWN
+
+

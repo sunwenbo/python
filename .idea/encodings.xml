@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/0.python基础/day01.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day02.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day03if语句&amp;运算符.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day04字符串.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day04字符串处理.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day05while 语句.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day06 list列表.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day07 if elif else.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day08 绘图模块turtle.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day09元组，字典set.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day10迭代器.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day11-1函数def装饰器、偏函数.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day11-1函数def装饰器、偏函数、.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day11函数def装饰器.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day12异常处理.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day13递归、栈、队列.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/0.python基础/day14面向对象 类.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/1.面向对象/7.发送短信和邮件/互亿无线-短信验证/ihuyi-sms-3.3/ihuyi-sms-3.3/互亿无线-短信验证码接口文档/DEMO/python/sms3 - requests.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/1.面向对象/7.发送短信和邮件/互亿无线-短信验证/ihuyi-sms-3.3/ihuyi-sms-3.3/互亿无线-短信验证码接口文档/DEMO/python/sms3.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/1.面向对象/8.自动提款机系统/allusers.txt" charset="US-ASCII" />
+    <file url="file://$PROJECT_DIR$/3.自动化办公与文件处理/3.读取word文件/a.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/venv/Scripts/pip-script.py" charset="US-ASCII" />
+  </component>
+</project>

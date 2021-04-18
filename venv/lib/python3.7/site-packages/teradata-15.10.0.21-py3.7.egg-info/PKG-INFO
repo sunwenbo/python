@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: teradata
+Version: 15.10.0.21
+Summary: The Teradata python module for DevOps enabled SQL scripting for Teradata UDA.
+Home-page: http://github.com/teradata/PyTd
+Author: Teradata Corporation
+Author-email: eric.scheie@teradata.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

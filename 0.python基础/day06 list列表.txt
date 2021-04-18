@@ -1,0 +1,233 @@
+"""
+#布尔值：一个布尔值只有True、False两种值
+b1 = True
+b2 = False
+print(b1,b2)
+#空值：是Python 里一个特殊的值，用None表示，none不能理解为0，
+#因为0是有意义的，而None是一个特殊值
+n = None
+print(n)
+print(type(n))
+#存储5个人的年龄，求他们的平均年龄
+age1 = 18
+age2 = 19
+age3 = 20
+age4 = 21
+age5 = 22
+print((age1 +age2 + age3 + age4 + age5 ) /5 )
+#思考：要存储100个人的年龄
+#使用列表
+#本质：是一种有序的集合
+创建列表
+格式：列表名 = [列表选项1，列表选项2，……，列表选项n]
+#创建一个空列表
+#list = []
+#print(list)
+#创建带有元素的列表
+#注意：列表中的元素数据可以是不同类型的
+list3 = [1, 2, "sunwenbo", True]
+print(list3)
+#列表元素的访问
+#不要越界（下标超出了可辨识的范围）
+#取值    格式：列表名[下标]
+list4 = [1, 2, 3, 4, 5]
+print(list4[2])
+#替换
+list4[0] = 6
+print(list4[0])
+print(list4)
+
+list2 = [18, 19, 20, 21, 22]
+index = 0
+sum = 0
+while index < 5 :
+    print(list2[index])
+    sum += list2[index]
+    index+= 1
+    if index== 5 :
+        print("平均年龄：%d" % sum)
+        print("平均年龄：%d" % (sum / 5))
+
+list2 = [33, 44, 55, 66, 77]
+index =0
+sum = 0
+while index < 5 :
+    sum += list2[index]
+    index += 1
+    if index == 5:
+        print("平均年龄是：%d" % (sum / 5 ))
+#列表操作：
+#列表组合
+list5 = [1, 2, 3]
+list6 = [4, 5, 6]
+list7 = list5 + list6
+print(list7)
+#列表的重复
+list8 = [1, 2, 3]
+print(list8 * 3)
+
+#判断元素是否在列表中
+list9 = [1, 2, 3, 4]
+print(3 in list9)
+#列表截取
+list10 = [1, 2, 3, 4, 5, 6, 7, 8 ,9]
+print(list10[2:6])
+print(list10[3:])
+print(list10[:3])
+#二维列表
+list11 = [[1, 2, 3],[4, 5, 6],[7, 8 ,9]]
+print(list11[2][2])
+
+#列表方法
+#append  给列表末尾追加一个新的元素
+list12 = [1, 2, 3, 4, 5]
+list12.append(6)
+list12.append([7, 8 ,9])
+print(list12[6][1])
+#extend 为列表末尾一次性追加一组元素,不能添加单个元素
+list13 = [1, 2, 3, 4, 5]
+list13.extend([6, 7, 8])
+print(list13)
+
+print(type(list13))
+print(id(list13) )
+
+#insert() 在下标处添加一个元素，不覆盖原数据，原数据向后顺延
+list14 = [1, 2, 3, 4, 5]
+list14.insert(5, 100)
+print(list14)
+
+#pop(x=list[-1])
+#移除列表下标处的元素。默认去掉list最后一个下标。并返回删除的数据
+list15= [1, 2, 3, 4, 5]
+list15.pop()
+list15.pop(2)
+print(list15.pop(1))
+print(list15)
+#remove  移除列表中的某个元素第一个匹配的结果
+list16 = [1, 2, 3, 4, 5, 6, 4]
+list16.remove(4)
+print(list16)
+
+#clear() 清楚列表中的所有数据
+list17 = [1, 2, 3, 4, 5]
+list17.clear()
+print(list17)
+
+# 从列表中找到某个值的第一个匹配的索引值
+#查找关键词，并返回它的下标值
+list18 = [1, 2, 3, 4, 5]
+index18 = list18.index(3)
+print(index18)
+
+list19 = list18.index(3, 3, 7)
+print(list18, list19)
+
+#列表中元素的个数
+list20 = [1, 2, 3, 4, 5]
+print(len(list20))
+#max  获取列表里最大的数值
+list21 = [1, 2, 3, 4, 5]
+print(max(list21))
+#min  获取列表里最小的数值
+list22 = [1, 2, 3, 4, 5]
+print(min(list21))
+
+#count 获取指定数字在列表出现的次数
+list23 = [1, 2, 3, 4, 5, 6, 3, 3, 3, 3,]
+#print(list23.count(3))
+num24 = 0
+all = list23.count(3)
+while num24 < all :
+    list23.remove(3)
+    num24 += 1
+print(list23)
+
+#倒叙
+list25 = [1, 2, 3, 4, 5]
+list25.reverse()
+print(list25)
+
+#排序  升序
+list26 = [5, 3, 1, 2, 4, 0]
+list26.sort()
+print(list26)
+
+#拷贝   浅拷贝
+list27 = [1, 2, 3, 4, 5]
+list28 = list27
+list28[1] = 200
+print(list27)
+print(list28)
+print(id(list27))
+print(id(list28))
+
+#深拷贝  内存的拷贝
+list29 = [1, 2, 3, 4, 5]
+list30 = list29.copy()
+list30[1] = 200
+print(list29)
+print(list30)
+
+#将元组转为列表
+list31 = tuple((1, 2, 3, 4, 5))
+print(list31)
+print(type(list31))
+
+listnum = []
+num = 0
+while num < 5 :
+    va1 = int(input())
+    listnum.append(va1)
+    num += 1
+
+#升序排序
+listnum.sort()
+#count = listnum.count(listnum[len(listnum) - 1 ])
+#c = 0
+#while c < count :
+listnum.pop()
+print(max(listnum))
+#print(listnum[len(listnum) - 1 ])
+
+num = int(input())
+i = 2
+while num != 1:
+    if num % i == 0:
+        print(i)
+        num //= i
+    else :
+        i += 1
+"""
+
+
+list=[('iphone',5000),('mac',9000),('python_book',80),('coffee',35),('bike',2000)]
+GWC = []
+GZ = input("请输入您要存钱的数目用于购物:")
+if GZ.isdigit():
+    GZ = int(GZ)
+else:
+    exit("错误的输入！")
+while True:
+    for i, v in enumerate(list, 1):
+        print(i, '>>>>', v)
+    tx = input("输入您要购买商品的序号按[q]退出:")
+    if tx.isdigit():
+        tx = int(tx)
+        if tx >= 0 and tx <= len(list):
+            tx_item = list[tx-1]
+            if tx_item[1] < GZ:
+                GZ  -= tx_item[1]
+                GWC.append(tx_item)
+            else:
+                print("余额不足，还剩%s" % (GZ))
+        else:
+            print("错误的编码!")
+    elif tx == 'q':
+        print('------------您已经购买如下商品----------------')
+        for i in GWC:
+            print(i)
+        print("您的余额为%s元钱" % (GZ))
+        break
+else:
+    print("=========================")

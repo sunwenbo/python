@@ -1,0 +1,298 @@
+"""
+什么是字符串
+字符串是已单引号或者双引号括起来的任意文本
+'abc'
+"def"
+#创建字符串
+str1  = "sunck is a good man!"
+str3  = "sunck is a nice man!"
+str5  = "sunck is a handsome man!"
+#字符串运算    字符串连接
+str6 = "sunck is a "
+str7 = "good man"
+str8 = str6 + str7
+print(str8)
+#输出重复字符串
+str9 = "good"
+str10 = str9 * 3
+print("str10is:",str10)
+#访问字符串中的某一个字符
+#通过索引下标找字符，索引从0开始
+#字符串名[下标]
+str11 = "sunck is a good man!"
+print(str11[1])
+"""
+#截取字符串中的一部分
+#从给定下标处开始截取到给定下标之前
+"""
+str13 = "sunwenbo is a good man!"
+str15 = str13[9:18]
+print("str15", str15)
+#从头截取到给定下标之前
+str16 = str13[:5]
+print("str16", str16)
+#从给定下标处开始截取到结尾
+
+str17 = str13[19:]
+print("str17", str17)
+#判断字符串包含某些字符，返回值true  false
+print("man!" in str17)
+print("man!" not in str17)
+
+#能被4整除不能被100整除  或者  能被400整除
+
+year = int(input("请输入一个年份:"))
+
+if   (year % 4 == 0 and year % 100 != 0) or year % 400 == 0  :
+    print("是闰年!")
+else:
+    print("不是闰年！")
+exit(1)
+2018
+"""
+
+#print(~5)  返回复数   源码变换补码  计算首位补1  其他位相反
+
+#  %d  数字的占位符    %s   字符串占位符   %f  浮点数占位符 .3保留小数点几位数 会四舍五入
+"""
+str20 = 'sunwenbo'
+str21 = str20* 3
+print("str21is", str21)
+num2 = 123
+num3 = num2 * 2
+print("num3的值是", num3)
+str111 = "admin app local"
+str222 = str111[:5]
+str333 = str111[6:9]
+print(str333)
+print(str222)
+str444 = str111[10:]
+print(str444)
+print("app" in str111)
+print("app2" not in str111)
+"""
+'''
+year = int(input("请输入一个年份:"))
+
+if (year % 4 == 0 and year % 100 != 0 ) or year % 400 == 0 :
+    print("year是闰年", year)
+else:
+    print("不是闰年,请重新输入")
+
+print(~6)
+00000110
+11111001      数据位不变，其他位取反，最后再加1
+10000111
+'''
+"""
+print(~8)
+num  = 10
+str19 = "guolili"
+float = 1.126
+#转义字符   \   \"  \'  将一些字符转换成有特殊含义的字符
+print(" num = %d\n str19 = %s\n float = %.2f\n "  % (num,str19,float))
+print("appdata \\ is")
+print("tom is a 'good' man")
+print(
+'''
+good
+nice
+handsome
+''')
+"""
+#如果字符中有多个字符串需要转义，就需要加入好多\，为了简化，
+#Python允许用r表示内部的字符串默认不转义
+"""
+print("sunck\tgood")
+print(r"\\\t\\")   # 屏蔽多个转义符号
+"""
+"""
+#eval(str)
+#功能：将字符串str当成有效的表达式来求值并返回计算结果
+num1 = eval("123")
+print(num1)
+print(type(num1))
+print(eval("+123"))
+print(eval("12+3"))
+print(eval("12%3"))
+#len(str)
+#返回字符串的长度
+print(len("sunwenbo is a good man!"))
+"""
+"""
+#lower(str)转换字符串中大写字母为小写字母
+str20 = "SUNWENBO is a Good Man"
+print(str20.lower())  #重新生成了一个字符串str20并没有改变
+print("str20 = %s " %(str20))
+str21 = str20.lower()
+print(str21)
+
+#upper(str)转换字符串中小写字母为大写字母
+print(str21.upper())
+
+#str22 = eval("222")
+#print(str22)
+#print(type(str22))
+
+#swapcase() 转换字符串中小写字母为大写，大写为小写
+print(str20.swapcase())
+
+#capitalize  将字符串首字母大写，其余小写
+str23 = str20
+print(str23.capitalize())
+#title()  单词的首字母大写
+str24 = str20
+print(str24.title())
+"""
+"""
+#center(widtch[, fillchar])  在指定的宽度的居中字符串，填充字符串,默认为空格
+str25 = "sunwenbo is a good man"
+print(str25.center(40 , "*"))
+print(str25.title().center(50, "*"))
+
+#ljust(width[, fillchar])   左对齐
+str26 = "sunwenbo is a nice man"
+print(str26.ljust(40,"%"))
+
+#rjust(width[, fillchar])   右对齐
+str27 = "sunwenbo is a nice man"
+print(str27.rjust(40,"%"))
+
+#zfill(width)   在指定宽度前添加0，右对齐
+str28 = "sunwenbo is a good man"
+print(str28.zfill(40))
+
+#count(str[,start][,end]) 返回字符串中str中出现的次数，可以指定一个范围，默认从头到尾
+str29 = "sunwenbo is very very good man!"
+print(str29.count("very"))
+
+#find(str[,start][,end]) 检查str字符串是否包含在字符串中，可以指定范围，默认从头到尾，得到的是第一次出现的下标
+str30 = "sunwenbo is a very very good man"
+print(str30.find("nice"))   #没有找到返回-1
+print(str30.find("very", 15, len(str30)))  #从右到左，出现第一次累计计算字符串长度
+
+#index(str, start=0, end=leng(str))
+#跟find()一样，只不过当被查找的字符串不存在时，会报异常
+str31 = "sunwenbo is a very very good man"
+print(str31.index("very"))
+
+#lstrip()  截取字符串左侧指定的字符，默认为空格
+str33 = "*******sunwenbo is a good man******"
+print(str33.lstrip("*"))
+#rstrip()  截取字符串右侧指定的字符，默认为空格
+print(str33.rstrip("*"))
+print(str33.rstrip(),"*")   #截取第二个*
+#strip截取左右侧指定的字符串
+str35 = "*******sunwenbo is a good man*******"
+print(str35.strip("*"))
+
+#split(str="", num)
+#以str为分隔符截取字符串，指定num，则仅截取num哥字符串
+str38 = "sunwenbo is a good man very good man!"
+list39 = str38.split(" ")    #可以理解将字符转换为一个列表。
+c = 0
+for s in list39:
+    print(len(s))
+    if len(s) > 0 :
+        c += 1
+print(c)
+
+
+num1 = "sunwenbo is a very good man!"
+num2 = num1.split(" ")
+count =0
+for i in num2 :
+    if len(i) > 0 :
+        count += 1
+print("一共有%s个单词" % count )
+
+#splitlines(keepends)   按照('\r'  ,  '\r\n'   ,  '\n')
+#keepends == True  会保留换行符
+str40 = '''
+sunwenbo is a good man!
+sunwenbo is a nice man!
+sunwenbo is a handsome man!
+'''
+#join将列表转换成一个字符串
+print(str40)
+print(str40.splitlines(False))
+list41 = ['sunwenbo', 'is', 'a', 'good', 'man!']
+str42 = "&^%$#.join(list41)"
+print(str42)
+
+#max()   min()   取最大的字符串
+
+str43 = "sunwenbo is a good man z"
+print(max(str43))
+
+#replace(oldstr, newstr, count)
+#用newstr替换lodstr，默认是全部替换，如果指定了count，那么只提换前count下
+str44 = "sunwenbo is a good man"
+str45 = str44.replace("good","nice")
+print(str45)
+#创建一个字符映像设备
+str46 = str.maketrans("sunck",'kaige')
+str47="sunwenbo is a good man"
+str48 = str47.translate(str46)
+print(str48)
+
+#startswith(str,start=0,end=len(str))   判断以什么开头
+str49 = "sunwenbo is a good man"
+print(str49.startswith("unwenbo",1,16))   #为真
+#endswith("关键字")   判断以什么结尾，结果为True  Flase
+str50 = "sunwenbo is a nice man"
+print(str50.endswith("man"))
+
+#编码
+#encode(encoding="utf-8",errors="strict")   utf-8   gbk
+str51 = "sunwenbo is a 好男人"
+#ignore 忽略错误
+print(str51.encode())
+data52 = str51.encode("utf-8","ignore")
+print(data52)
+#解码  注意：要与编码的编码格式一致
+str53 = data52.decode("gbk","ignore")
+print(str53)
+
+#isalpha()
+#如果字符串中至少有一个字符，且所有的字符都是字母返回True，否则返回False
+str54 = "sunwenboisagoodman"
+print(str54.isalpha())
+#isalnum
+#如果字符串中至少有一个字符切所有的字符都是祖母或者数字返回True，否则返回False
+str55 = "adfa123.."
+print(str55.isalnum() )
+
+#isupper()
+#字符串中至少要有一个字符且所有的字符都是大写英文字母返回True，否则返回False
+#可以有数字或者是特殊字符，但至少得有一个英文字符且所有的字母都是大写的
+str56 = "AAA2"
+print(str56.isupper())
+print("ABC".isupper())
+
+#islower()
+#和isupper 相反   必须有一个字母是小写
+
+#istitle()
+#如果字符串是标题化的返回True，否则返回False (每个单词的首字母是大写，)
+print("Sunwenbo Is".istitle())
+print("Sunwenbo is".istitle())
+
+#isdigit()  如果字符串只包含数字字符返回True，否则返回False
+print("123".isdigit())
+print("123a".isdigit())
+#isnumeric()  字符串中必须全部都是数字
+print("1234".isnumeric())
+print("123a".isdigit())
+"""
+#isdecimal 字符串只包含十进制字符
+print("123".isdecimal())
+print("123a".isdecimal())
+
+#isspace()  如果字符串中只包含空格则返回True，否则返回False
+print(" ".isspace())
+print("       ".isspace())
+print("\t".isspace())
+print("\n".isspace())
+print("\f".isspace())
+print("\r".isspace())
