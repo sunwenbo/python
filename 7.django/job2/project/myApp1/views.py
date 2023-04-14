@@ -103,6 +103,7 @@ def get2(request):
     return HttpResponse(a1 + "  " +  "  "+ a2 + "  " + c)
 def showregistry(request):
     return render(request,'myApp1/registry.html')
+
 def registry(request):
     name = request.POST.get("name")
     gender = request.POST.get("gender")
@@ -165,6 +166,9 @@ def quit(request):
 
 def good(request,id,id2):
     return render(request, 'myApp1/good.html',{"num":id},{"num2":id2})
+def www(request):
+    return render(request, 'myApp1/good.html')
+
 def main1(request):
     return render(request,'myApp1/main1.html')
 def main2(request):
@@ -295,7 +299,6 @@ def savefile(request):
         return HttpResponse("上传成功")
     else:
         return HttpResponse("上传失败")
-
 from django.core.paginator import Paginator
 #分页显示
 def studentpage(request,pageid):

@@ -5,13 +5,14 @@ from .models import Grades,Students
 
 class StudentsInfo(admin.TabularInline):#StackedInline
     model = Students
-    extra = 2
+    extra = 1
 
 @admin.register(Grades)
 class GradesAdmin(admin.ModelAdmin):
     inlines = [StudentsInfo]
+    print(inlines)
     # #列表页属性
-    list_display = ['pk','gname','ggirlnum','bboynum','isDelete']
+    list_display = ['id','gname','ggirlnum','bboynum','isDelete']
     list_filter = ['gname']
     list_per_page = 5
     search_fields = ['gname']
@@ -44,7 +45,7 @@ class StudentsAdmin(admin.ModelAdmin):
 
     list_display = [pk,name,gender,age,contend,'isDelete']
     list_filter = ['sname']
-    list_per_page = 2
+    list_per_page = 4
     search_fields = ['sname']
     fieldsets = [("base",{"fields":['sname','gender','sage','isDelete']}),
                  ("num",{"fields":['scontend']})]

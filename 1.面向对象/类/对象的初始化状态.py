@@ -16,7 +16,7 @@ class Person(object):
         print(self.__class__)
 per1 = Person("sunwenbo",24,177,60)
 print(per1.name,per1.age,per1.height,per1.weight)
-per2 = Person("sunxijiao",24,167,50)
+per2 = Person("zhangsan",24,160,50)
 print(per2.name,per2.age,per2.height,per2.weight)
 '''
 self代表类的实例，而非类

@@ -17,10 +17,10 @@ class Person(object):
         print("run")
     def eat(self, food: object) -> object:
         print("eat " + food)
-    #def __del__(self):
-        print("这里是析构函数")
     def __str__(self):
         return "%s-%d-%d-%d" % (self.name,self.age,self.height,self.weight)
+    # def __repr__(self):
+    #     return "%s-%d-%d-%d" % (self.name,self.age,self.height,self.weight)
 per = Person("sunwenbo",24,177,60)
 print(per)
 #优点：当一个对象的属性值很多，并且都需要打印，重写了__str__方法后，简化了代码

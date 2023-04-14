@@ -8,17 +8,17 @@ def copyFile(rPath,wPath):
     fr.close()
     fw.close()
 
-path = r"/Users/sunwenbo/Downloads/python/9.线程于进程/2.进程/file"
-topath = r"/Users/sunwenbo/Downloads/python/9.线程于进程/2.进程/tofile"
+srcpath = r"/Users/admin/Documents/python/9.线程于进程/2.进程/file"
+topath = r"/Users/admin/Documents/python/9.线程于进程/2.进程/tofile"
 
 if __name__ == "__main__":
     # 读取path下的所有文件
-    filesList = os.listdir(path)
+    filesList = os.listdir(srcpath)
     print(filesList)
     start = time.time()
     pp = Pool(5)
     for filesName in filesList:
-        pp.apply_async(copyFile,args=(os.path.join(path,filesName),os.path.join(topath,filesName)))
+        pp.apply_async(copyFile,args=(os.path.join(srcpath,filesName),os.path.join(topath,filesName)))
     pp.close()
     pp.join()
     end = time.time()

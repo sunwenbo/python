@@ -1,7 +1,7 @@
 import  socket
 
 client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-client.connect(('192.168.124.14',8080))
+client.connect(('127.0.0.1',8080))
 count = 0
 while True:
     count += 1

@@ -143,7 +143,7 @@ TINYMCE_DEFAULT_CONFIG = {
 #celery配置
 import djcelery
 djcelery.setup_loader() #初始化
-BROKER_URL='redis://39.106.133.114:6379/0'
+BROKER_URL='redis://localhost:6379/0'
 #BROKER_URL='redis://:sunwenbo@127.0.0.1:6379/0'
 #              格式：  密码@IP:端口号/库
 CELERY_IMPORTS={'myApp1.task'}

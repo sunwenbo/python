@@ -6,4 +6,4 @@ class Father(object):
     def play(self):
         print("play")
     def func(self):
-        print("sunwenbo1")
+        print("sunwenbo2")

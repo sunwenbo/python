@@ -1,0 +1,3 @@
+[console_scripts]
+hashring = hashring.__main__:main
+

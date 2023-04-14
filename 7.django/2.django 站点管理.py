@@ -6,7 +6,7 @@ Admin站点管理
 概述：
     内容发布：负责添加、修改、删除内容
     公告访问：
-配置Admin应用：zai settings.py 中INSTALLED_APPS 添加 'django.contrib.admin' 默认是添加好的
+配置Admin应用：在settings.py 中INSTALLED_APPS 添加 'django.contrib.admin' 默认是添加好的
 创建管理员用户：python manage.py createsuperuser  输入用户名、邮箱和密码
 汉化：修改settings.py文件 LANGUAGE_CODE = 'zh-Hans'  TIME_ZONE = 'Asia/Shanghai'
 管理数据表：修改admin.py 文件

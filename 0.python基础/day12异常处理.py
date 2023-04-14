@@ -1,12 +1,6 @@
 
 #需求：当程序遇到问题时不让程序结束，而越过错误继续向下执行
 """
-def print99():
-    for i in range(1,10):
-        for j in range(1,i+1):
-            print("%d*%d=%d" % (i,j,i*j),end=" ")
-        print("")
-print99()
 
 try……except……else
 格式：

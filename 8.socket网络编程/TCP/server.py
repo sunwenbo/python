@@ -2,7 +2,7 @@ import socket
 #创建一个socket链接
 server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 #绑定ip和端口
-server.bind(('192.168.124.14',8080))
+server.bind(('127.0.0.1',8080))
 #监听
 server.listen(5)
 print("启动成功")

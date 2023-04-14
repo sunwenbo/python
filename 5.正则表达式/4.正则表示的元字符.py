@@ -29,6 +29,7 @@ print(re.findall("\D","sunwenbo is 5 a good man 6"))
 print(re.findall("\w","sunwenbo 孙文波is 5 a good man 6_-"))
 print(re.findall("\W","sunwenbo 孙文波is 5 a good man 6_-"))
 
+
 print("-----------锚字符(边界字符)------------")
 '''
 ^          行首匹配，在和[]里面的^不是一个意思,匹配每一行的行首
@@ -76,9 +77,9 @@ print(re.findall(r"((s|S)unwenbo)","sunwenbo---Sunwenbo"))
 
 #需求，提取sunwenbo……man.
 
-str = "sunwenbo is a good man! sunwenbo is a nice man!sunwenbo is a very handsome man"
+str1 = "sunwenbo is a good man! sunwenbo is a nice man!sunwenbo is a very handsome man"
 
-print(re.findall(r"sunwenbo.*?man$",str))
+print(re.findall(r"sunwenbo.*?man$",str1))
 
 
 print("---------------特殊-----------------")
@@ -89,3 +90,10 @@ print("---------------特殊-----------------")
 #注释： /* part1  */    /*  part2  */
 print(re.findall(r"/\*.*?/*/",r"/* part1  */    /*  part2  */"))
 
+
+pat1 = r".*\d+/(.+?)/.*"
+pat = r"\S+/(\w+.+)/"
+str0 = 'docker2.yidian.com:5000/publish/'
+str1 = 'harbor.int.yidian-inc.com/sre-project/'
+str2 = ''.join(re.findall(pat,str0))
+print(str2)

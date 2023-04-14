@@ -4,7 +4,7 @@ from card import Card
 from user import User
 import random
 
-class ATM():
+class ATM(object):
     def __init__(self,allUser):
         self.allUsers = allUser
     #开户

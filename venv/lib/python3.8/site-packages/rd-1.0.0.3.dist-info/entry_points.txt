@@ -1,0 +1,3 @@
+[console_scripts]
+rd = rdclient.main:main
+

@@ -1,0 +1,10 @@
+python  django 定时任务
+
+添加一个定时任务
+ python manage.py crontab add
+
+查看现有的定时任务
+ python manage.py crontab show
+
+删除所有的定时任务
+ python manage.py crontab remove

@@ -80,8 +80,6 @@ def say1(age):
 say(-20)
 say1(-10)
 
-
-
 def outer1(func10):
     def inner1(age1):
         if age1 < 0 :
@@ -111,6 +109,11 @@ for i in range(1,10):
     for j in range(i,10):
         print("%d * %d = %d" % (i,j,j*i),end="")
     print("")
+    
+for i in range(1,10):
+    for j in range(1,i + 1):
+        print("%d * %d = %d " %(i,j,i * j),end=" ")
+    print( )
 
 
 默认参数
@@ -133,8 +136,8 @@ myPrint("kaige is a good man!")
 #如果在函数调用时没有指定参数，她就是一个空元组。
 '''
 def func(*abc):
-    #print(name)
     print(type(abc))
+    print(abc)
     for x in abc:
         print(x)
 func("sunwenbo","is","a","good","man!")
@@ -157,14 +160,11 @@ func2(x=1,y=2,z=3)          #传关键字参数，变成字典类型
 def func3(*args, **kwargs):
     print(*args, **kwargs)
     # pass  #代表一个空语句
-
-
+    
 func3(1, 2, 4, 5, 5)
-
 
 def mySum(num1, num2):
     return num1 + num2
-
 
 res = mySum(22121, 13232)
 print(type(res))
@@ -172,6 +172,15 @@ print(res)
 
 '''
 
+def func1(func):
+    #开始创建装饰器
+    def func2():
+        print("准备执行add函数")
+        func()
+        print("执行add函数结束")
+    return func2
 
-
+@func1
+def add():
+    print("add函数正在执行")
 

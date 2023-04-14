@@ -29,5 +29,5 @@ def readXlsxFile(path):
             print(lineList)
 
 #不能处理xls文件
-path = r'E:\python笔记\3.自动化办公\4.读取excel文件\加密机_密钥接口分析.xlsx'
+path = r'/Users/admin/Desktop/成本-第三批优化.xlsx'
 readXlsxFile(path)

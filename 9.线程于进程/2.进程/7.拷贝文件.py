@@ -8,15 +8,15 @@ def copyFile(rPath,wPath):
     fr.close()
     fw.close()
 
-path = r"/Users/sunwenbo/Documents/python/9.线程于进程/2.进程/file"
-topath = r"/Users/sunwenbo/Documents/python/9.线程于进程/2.进程/tofile"
+srcpath = r"/Users/admin/Documents/python/9.线程于进程/2.进程/file"
+topath = r"/Users/admin/Documents/python/9.线程于进程/2.进程/tofile"
 
 #读取path下的所有文件
-filesList = os.listdir(path)
+filesList = os.listdir(srcpath)
 #启动for循环处理每一个文件
 start = time.time()
 for fileName in filesList:
-    copyFile(os.path.join(path,fileName),os.path.join(topath,fileName))
+    copyFile(os.path.join(srcpath,fileName),os.path.join(topath,fileName))
 
 end = time.time()
 print("总耗时： %0.2f" % (end-start))

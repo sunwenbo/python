@@ -17,6 +17,7 @@ string  要匹配的字符串
 flags   标志位，用于控制正则表达式的匹配方式
 功能：与findall类似，扫描整个字符串，返回的是一个迭代器
 '''
+
 str3 = "sunwenbo is a good man! sunwenbo is a nice man!"
 d = re.finditer(r"(sunwenbo)",str3)
 while True:

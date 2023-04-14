@@ -7,6 +7,6 @@ class Person(object):
     # def feedMouse(self,mouse):
     #     print("给你食物")
     #     mouse.eat()
-    def feedAnimal(self,ani):
+    def feedAnimal(self,animals):
         print("给你食物")
-        ani.eat()
+        animals.eat()

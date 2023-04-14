@@ -31,7 +31,6 @@ class StudentsManager(models.Manager):
 class Students(models.Model):
     #自定义模型管理器
     #当自定义模型管理器，objects就不存在了
-    stuObj = models.Manager()
     stuObj2 = StudentsManager()  #使用自定义的模型类创建模型管理器
     sname = models.CharField(max_length=20)
     sgender = models.BooleanField(default=True)

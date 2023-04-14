@@ -6,4 +6,4 @@ class Mother(object):
     def eat(self,eatvalue):
         print("eat",eatvalue)
     def func(self):
-        print("sunwenbo2")
+        print("sunwenbo1")

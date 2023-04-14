@@ -44,8 +44,3 @@ print(restaurant.describe_restaurant())
 print(restaurant.open_restaurant())
 restaurant = Restaurant(123,456)
 print(restaurant.describe_restaurant())
-
-
-
-
-x

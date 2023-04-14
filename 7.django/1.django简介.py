@@ -95,16 +95,16 @@ class Students(models.Model):
          Grades.objects.all()
     4) 添加数据 本质：创建一个模型类的对象实例
         grade1 = Grades()
-        grade1.gname = "python04"
-        grade1.gdate = datetime(year=2020,month=7,day=17)
-        grade1.ggirlnum = 3
-        grade1.bboynum = 30
+        grade1.gname = "python06"
+        grade1.gdate = datetime(year=2021,month=7,day=17)
+        grade1.ggirlnum = 4
+        grade1.bboynum = 40
         grade1.save()
         grade2 = Grades()
-        grade2.gname = "python05"
-        grade2.gdate = datetime(year=2020,month=6,day=20)
-        grade2.ggirlnum = 5
-        grade2.bboynum = 40
+        grade2.gname = "python07"
+        grade2.gdate = datetime(year=2021,month=6,day=20)
+        grade2.ggirlnum = 6
+        grade2.bboynum = 50
         grade2.save()
 
     5) 查看某个对象 格式类名.方法(条件)

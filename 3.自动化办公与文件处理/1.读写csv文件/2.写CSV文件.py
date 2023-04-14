@@ -3,11 +3,19 @@
 import csv
 
 def writeCsv(path,data):
-    with open(path,"w",encoding="utf-8",newline="") as f:
-        write = csv.writer(f)
-        for rowData in data:
-            write.writerow(rowData)
+    with open(filedata,"r",encoding="utf-8") as data:
+        fileinfo = data.readlines()
+        print(fileinfo)
+        print(type(fileinfo))
 
-path = r'E:\python笔记\自动化办公\1.读写csv文件\00000000卡交易明细20200109143232.csv'
+    with open(path,"a",encoding="utf-8",newline="") as f:
+        #write = f.write()
+        # write.writerow(fileinfo)
+        for rowData in fileinfo:
+            f.write(rowData)
 
-writeCsv(path,[[1,2,3],[4,5,6],[7,8,9]])
+path = r'/Users/sunwenbo/Downloads/python/3.自动化办公与文件处理/1.读写csv文件/00000000卡交易明细20200109143233.csv'
+
+filedata = r'/Users/sunwenbo/Downloads/python/3.自动化办公与文件处理/1.读写csv文件/1.读CSV文件.py'
+
+writeCsv(path,filedata)

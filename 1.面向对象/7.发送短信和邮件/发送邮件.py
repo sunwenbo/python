@@ -9,7 +9,7 @@ SMTPserver = "smtp.163.com"
 #发邮件的地址
 Sender="swb956721830@163.com"
 #发送者邮件的密码,授权密码
-Passwd = "1qaz2wsx"
+Passwd = "LRNWTQVGNKHDQEIV"
 #设置发送的内容
 Message = "sunwenbo is a good man"
 msg = MIMEText(Message)

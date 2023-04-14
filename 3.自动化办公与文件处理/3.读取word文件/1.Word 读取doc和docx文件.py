@@ -17,5 +17,5 @@ def readWordFile(path):
     mw.Quit()
 
 
-path = r'E:\python笔记\3.自动化办公\3.读取word文件\2.docx'
+path = r'/Users/admin/image'
 readWordFile(path)

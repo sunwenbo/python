@@ -3,7 +3,7 @@
 from Father import Father
 from Mother import Mother
 
-class Child(Father,Mother):
+class Child(Mother,Father):
     def __init__(self,money,faceValue,name,age):
         Father.__init__(self,money)
         Mother.__init__(self,faceValue)

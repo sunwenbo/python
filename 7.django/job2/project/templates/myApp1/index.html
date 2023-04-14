@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +11,7 @@
 <body>
     <a href="good/123">链接</a>
     <a href="{% url 'app:good' 1 2 %}">链接</a>
+    <a href="www">链接</a>
     <h1>sunwenbo is a nice man </h1>
     <h1>{{stu.sname}}</h1>
     <h1>{{stu.getName}}</h1>

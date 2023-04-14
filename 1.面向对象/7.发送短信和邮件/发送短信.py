@@ -38,3 +38,5 @@ response = requests.post(url,headers = headers,data=data)
     #data 请求的数据
 
 print(response.content.decode())
+
+

@@ -7,3 +7,4 @@ class Work(Person):
         self.like = like
 
 
+

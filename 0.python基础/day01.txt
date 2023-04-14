@@ -1,7 +1,6 @@
 python day01
 
 input()    可以实现与python交互，根据用户输入的数据类型，赋值给变量
-input（）  输出必须以数字类型
 import    导入模块
 
 数据类型：

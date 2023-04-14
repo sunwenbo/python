@@ -117,26 +117,26 @@ getALLdirDE(r"F:\密管系统-发行系统\app\kms-crypto-service")
 #四、列队广度遍历目录
 import os
 import collections
-def getAllDirQU(path):
-    queue = collections.deque()
-    #进队
-    queue.append(path)
-    while len(queue) != 0 :
-        #出队数据
-        dirPath = queue.popleft()
-        #找出所有的文件
-        filesList = os.listdir(dirPath)
-        for  fileName in filesList:
-            #绝对路径
-            fileAbsPath = os.path.join(dirPath,fileName)
-            print(fileAbsPath,"****")
-            #判断是否是目录，是目录就进队，不是就打印
-            if os.path.isdir(fileAbsPath):
-                print("目录：" + fileName)
-                queue.append(fileAbsPath)
-            else:
-                print("普通文件" + fileName)
-getAllDirQU(r"F:\密管系统-发行系统\app\kms-crypto-service")
+# def getAllDirQU(path):
+#     queue = collections.deque()
+#     #进队
+#     queue.append(path)
+#     while len(queue) != 0 :
+#         #出队数据
+#         dirPath = queue.popleft()
+#         #找出所有的文件
+#         filesList = os.listdir(dirPath)
+#         for  fileName in filesList:
+#             #绝对路径
+#             fileAbsPath = os.path.join(dirPath,fileName)
+#             print(fileAbsPath,"****")
+#             #判断是否是目录，是目录就进队，不是就打印
+#             if os.path.isdir(fileAbsPath):
+#                 print("目录：" + fileName)
+#                 queue.append(fileAbsPath)
+#             else:
+#                 print("普通文件" + fileName)
+# getAllDirQU(r"F:\密管系统-发行系统\app\kms-crypto-service")
 
 # shoping_list=[('iphone',5000),('mac',9000),('python_book',80),('coffee',35),('bike',2000)]
 # gwc = []
@@ -187,6 +187,7 @@ while True:
             if tx_item[1] < GZ:
                 GZ  -= tx_item[1]
                 GWC.append(tx_item)
+                print("已购买商品",GWC)
             else:
                 print("余额不足，还剩%s" % (GZ))
         else:
@@ -197,8 +198,8 @@ while True:
             print(i)
         print("您的余额为%s元钱" % (GZ))
         break
-else:
-    print("=========================")
+    else:
+        print("=========================")
 
 
 

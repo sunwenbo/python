@@ -44,5 +44,6 @@ urlpatterns = [
     url(r'^studentsinfo/$', views.studentsinfo),
     url(r'^edit/$', views.edit),
     url(r'^celery/$', views.celery),
+    url(r'^www/$', views.www),
 
 ]

@@ -13,8 +13,10 @@ from functools import reduce
 
 #将单个字符转成对应的字面量整数
 def cha2int(chr):
-    return {"0":0,"1":1,"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,}[chr]
+    return {"0":0,"1":1,"2":2,"3":3,"4":4,"5":5,"6":6}[chr]
+    # return chr ** 2
 list1 = ["2","1","6","5"]
+# list1 = [2,3,1,5]
 res = map(cha2int, list1)
 print(res)
 print(list(res))
@@ -22,7 +24,6 @@ print(list(res))
 #将整数元素的序列，转为字符串类型
 l = map(str,[1,2,3,4])
 print(list(l))
-
 
 #reduce(fn.lsd)
 #参数1位函数
@@ -38,7 +39,6 @@ def mySum(x,y):
 
 r = reduce(mySum,list2)
 print(r)
-
 
 def str2int(str):
     def fc(x,y):

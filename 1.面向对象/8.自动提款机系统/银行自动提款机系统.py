@@ -34,8 +34,6 @@ def main():
     f = open(filepath,"rb")
     # #将文件的内容赋值给allUser
     allUser = pickle.load(f)
-    print(allUser)
-    #print(allUser)
     #取款机对象
     #allUser = {}
     atm = ATM(allUser)

@@ -12,7 +12,7 @@ def wirte(q):
 def read(q):
     print("启动读子进程 %s" % (os.getpid()))
     while True:
-        value = q.get(True)
+        value = q.get()
         print("value = " + value)
 
     print("结束读子进程 %s" % (os.getpid()))

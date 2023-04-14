@@ -1,0 +1,9 @@
+[
+   {
+      "domain": "sunwenbo.test.yidian-inc.com",
+      "axe_path": "yidian/ops/sre/test-sre/ops-sre-ngconf2-test-sunwenbo/prod",
+      "department": "yidian/superfe",
+      "cluster_name": "yidian-inc.com_int5"
+   }
+]
+

@@ -87,7 +87,7 @@ print(~6)
 """
 print(~8)
 num  = 10
-str19 = "guolili"
+str19 = "sunwenbo"
 float = 1.126
 #转义字符   \   \"  \'  将一些字符转换成有特殊含义的字符
 print(" num = %d\n str19 = %s\n float = %.2f\n "  % (num,str19,float))

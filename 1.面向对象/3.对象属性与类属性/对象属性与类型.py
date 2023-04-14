@@ -1,16 +1,21 @@
 #__author:  Administrator
 #date:  2019/12/22
+from types import MethodType
+
 class Person(object,):
     # 这里的属性实际上属于类属性（用类名来调用）
     name = "person" #类属性
-    def __init__(self,name):
+    def __init__(self,name,age):
         self.name = name #对象属性
+        self.age = age
 
 #类名属性
 print(Person.name)
 #对象属性
-per = Person("tom")
-abc = Person("jeery")
+per = Person("tom",20)
+per.age = 20
+print(per.age)
+abc = Person("jeery",18)
 #对象属性的优先级高于类属性
 print(per.name)
 print(abc.name)
